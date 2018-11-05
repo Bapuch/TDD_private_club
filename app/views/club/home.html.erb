@@ -1,0 +1,14 @@
+<div class='container'>
+    <% if logged_in? %>
+        <div class='jumbotron card text-center bg-warning text-info'>
+            <h1 class='display-4'>Welcome <%= current_user.first_name %></h1>
+            <p class='lead'><%= link_to 'Enter', privateclub_path %></p>
+        </div>
+    <% else %>
+        <div class='jumbotron text-center'>
+            <h1>Sorry, this is a private club!</h1>
+            <p>You must <%= link_to 'log in', login_path %> to join the party</p>
+            <p>If you are a new joiner, please <%= link_to 'create an account', new_user_path %> first</p>
+        </div>
+    <% end%>
+</div>

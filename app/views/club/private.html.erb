@@ -1,0 +1,31 @@
+<div class='text-center'>
+<img src="http://static1.squarespace.com/static/539caa50e4b04eb6983b1fc3/t/5aecb09b6d2a7340a0cd89de/1525461165705/rickdancey.gif?format=1000w" alt="party">
+<div class='card-body border border-primary rounded m-2 p-3'>
+  <h2 class="text-capitalize font-weight-bold text-dark">Party people</h2>
+  <table class="table">
+    <thead class="thead-dark">
+      <tr>
+      <th scope="col" class="text-info">#</th>
+      <th scope="col">First Name</th>
+      <th scope="col">Last Name</th>
+      <th scope="col">email</th>
+      <th scope="col">Member since</th>
+      <th scope="col">Link</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @users.each do |user| %>
+      <tr>
+        <th scope="row" class="text-info"><%= user.id %></th>
+        <td class="text-capitalize"><%= user.first_name %></td>
+        <td><%= user.last_name %></td>
+        <td><%= user.email %></td>
+        <td class='small'><%= user.created_at.strftime("%e %b %y - %H:%M:%S") %></td>
+        <td><%= link_to 'Link', user_path(user.id), class: 'btn btn-success' %></td>
+      </tr>
+      <% end %>
+    </tbody>
+  </table>
+  </div>
+
+</div>

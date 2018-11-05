@@ -1,0 +1,19 @@
+<div class='container col-6 offset-3'>
+  <div class='card'>
+    <div class='card-header text-capitalize bg-dark text-light font-weight-bold'>
+      log in
+    </div>
+    <%= form_for :session, url: login_path do |f|%>
+    <div class='card-body'>
+      <div class='form-group'>
+        <label for="email", class='col-form-label'>email</label>
+        <%= f.text_field :email, class: 'form-control', id: 'email'%>
+        <label for="password", class='col-form-label'>Password</label>
+        <%= f.text_field :password, class: 'form-control', id: 'password', type: 'password'%>
+        <%= f.submit 'Log in', class: 'btn btn-primary'%>
+      </div>
+      <% end %>
+      <p>New user? Create your account <%= link_to 'now', new_user_path %>!</p>
+    </div>
+  </div>
+</div>
