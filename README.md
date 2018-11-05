@@ -6,7 +6,7 @@ Dear machin,
 
 Attaché à ce repo se trouve l'app <strong>TDD private club</strong>
 
-Tu trouveras [ici](https://gossip-fessebouc-style.herokuapp.com/) la version online de l'application sur Heroku
+Tu trouveras [ici](https://private-club-tdd.herokuapp.com/) la version online de l'application sur Heroku
 
 ### Travail réalisé par
 --------------------------------------------------

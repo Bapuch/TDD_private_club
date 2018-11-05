@@ -18,13 +18,15 @@
       <% flash.each do |type, msg|%>
     <% case type %>
         <% when 'alert' %>
-        <div class= "container text-center text-light bg-danger rounded"> <%= content_tag :div, msg %> </div>
+        <div class= "text-center text-light bg-danger rounded"> <%= content_tag :div, msg %> </div>
         <% when 'notice' %>
-        <div class= "container text-center text-light bg-warning rounded"> <%= content_tag :div, msg %> </div>
+        <div class= "text-center text-dark bg-warning rounded"> <%= content_tag :div, msg %> </div>
         <% when 'success' %>
-        <div class= "container text-center text-light bg-success rounded"> <%= content_tag :div, msg %> </div>
+        <div class= "text-center text-light bg-success rounded"> <%= content_tag :div, msg %> </div>
     <% end %>
   <% end %>
-    <%= yield %>
+
+      <%= yield %>
+
   </body>
 </html>

@@ -1,15 +1,19 @@
-<div class='jumbotron text-center'>
-  <h1 class='display-4'>Welcome to <%= @user.first_name %>'s show page!</h1>
-  <p class='lead'>Here are some personnal data about <%= @user.first_name %></p>
-  <ul class='list-group col-4 offset-4'>
-    <li class='list-group-item text-capitalize bg-dark text-light'> first name: <%= @user.first_name %></li>
-    <li class='list-group-item text-capitalize'> last name: <%= @user.last_name %></li>
-    <li class='list-group-item bg-dark text-light'> email: <%= @user.email %></li>
-  </ul>
-  <% if current_user == @user %>
-  <div class='p-3'>
-    <%= link_to 'Edit', edit_user_path(@user.id), class: 'btn btn-primary' %>
-    <%= link_to 'Delete', user_path(@user.id), class: 'btn btn-danger', 'data-confirm': "This profile will be deleted and you will be logged out", 'data-method': :delete %>
+<div class='container'>
+  <div class='jumbotron text-center border border-warning bd-secondary'>
+    <h1 class='display-4'>Welcome to <%= @user.first_name %>'s show page!</h1>
+    <p class='lead'>Here are some personnal data about <%= @user.first_name %></p>
+    <ul class='list-group col-4 offset-4'>
+      <li class='list-group-item text-capitalize bg-dark text-light'> first name: <%= @user.first_name %></li>
+      <li class='list-group-item text-capitalize bg-warning'> last name: <%= @user.last_name %></li>
+      <li class='list-group-item bg-dark text-light'> email: <%= @user.email %></li>
+    </ul>
+    <% if current_user == @user %>
+    <div class='p-3'>
+      <%= link_to 'Edit', edit_user_path(@user.id), class: 'btn btn-primary' %>
+      <%= link_to 'Delete', user_path(@user.id), class: 'btn btn-danger', 'data-confirm': "This profile will be deleted and you will be logged out", 'data-method': :delete %>
+    </div>
+    <% end %>
   </div>
-  <% end %>
 </div>
+
+
